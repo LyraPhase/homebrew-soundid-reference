@@ -47,7 +47,7 @@ First, make sure you have installed [`homebrew`](https://brew.sh) and
 
 Then, run the following in your command-line:
 
-    brew tap trinitronx/homebrew-soundid-reference
+    brew tap lyraphase/homebrew-soundid-reference
 
 ## Usage
 

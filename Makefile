@@ -1,4 +1,4 @@
-GITHUB_USER := trinitronx
+GITHUB_USER := lyraphase
 REPO_NAME := homebrew-soundid-reference
 REPO := $(GITHUB_USER)/$(REPO_NAME)
 CASK_NAME := soundid-reference

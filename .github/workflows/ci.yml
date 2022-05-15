@@ -23,9 +23,6 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v2
-      - name: Set BREWFILE_PATH env var
-        run: |
-          echo "BREWFILE_PATH=${GITHUB_WORKSPACE}/Brewfile.ci" >> $GITHUB_ENV
       - uses: webfactory/ssh-agent@v0.5.4
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
@@ -54,13 +51,12 @@ jobs:
           HOMEBREW_DEVELOPER: 1
         run: |
           brew update
-      - name: Install dependencies & Clean homebrew cache
+      - name: Clean homebrew cache
         env:
           HOMEBREW_COLOR: 1
           HOMEBREW_DEVELOPER: 1
         run: |
           brew cleanup
-          brew bundle install --file=${BREWFILE_PATH}
       - name: DEBUG - GitHub Workspace
         run: |
           echo GITHUB_WORKSPACE=$GITHUB_WORKSPACE

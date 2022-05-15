@@ -34,6 +34,6 @@ cask "soundid-reference" do
 
   installer manual: "SoundID Reference.app"
 
-  uninstall quit:    "com.sonarworks.SystemWide4|com.sonarworks.Reference4Measure|com.sonarworks.Reference4Installer|com.sonarworks.soundid.reference.installer.boot",
-            pkgutil: "com.sonarworks.plugin4.*|com.sonarworks.SystemWideApp4|com.sonarworks.Reference4Mac"
+  uninstall quit:    "com.sonarworks.soundid.reference.measure|com.sonarworks.soundid.reference.systemwide|com.sonarworks.soundid.reference.installer.boot",
+            pkgutil: "com.sonarworks.soundid.*"
 end

@@ -59,6 +59,11 @@ Once the tap is installed, you can install `soundid-reference`!
 
     brew install --cask soundid-reference
 
+Finally, run the manual installer app
+(and grumble at Sonarworks for not making this automatable):
+
+    open '/usr/local/Caskroom/soundid-reference/latest/SoundID Reference.app'
+
 To uninstall run:
 
     brew uninstall --cask soundid-reference

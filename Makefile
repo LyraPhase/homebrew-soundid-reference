@@ -27,7 +27,7 @@ test: install ## Run tests
 	brew audit --cask $(CASK_NAME)
 	brew install --cask --verbose $(CASK_NAME)
 	ls -lR "$$(brew --caskroom)/soundid-reference/"
-#          test -e "$${brew_prefix}/Caskroom/soundid-reference/latest/SoundID Reference.app"
+	test -e "$$(brew --caskroom)/Caskroom/soundid-reference/latest/SoundID Reference.app"
 #	pkgutil --pkgs=$(PKG_ID)
 
 clean:: ## Remove temporary/build files.

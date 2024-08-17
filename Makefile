@@ -26,18 +26,8 @@ install: $(TAP_DIR) $(TAP_DIR)/$(REPO_NAME) ## Install Tap via git checkout syml
 test: install ## Run tests
 	brew audit --cask $(CASK_NAME)
 	brew install --cask --verbose $(CASK_NAME)
-	# Arm64 / Apple Silicon detection
-	arm64=$(sysctl -n hw.optional.arm64) \
-          if [[ "$arm64" == '1' ]]; then \
-            brew_prefix="/opt/homebrew/" \
-          else
-            brew_prefix="/usr/local"
-          fi \
-          echo "arm64 = $arm64" \
-          echo "brew_prefix = $brew_prefix" \
-          env \
-          ls -lR "${brew_prefix}/Caskroom/soundid-reference/"
-#          test -e "${brew_prefix}/Caskroom/soundid-reference/latest/SoundID Reference.app"
+	ls -lR "$$(brew --caskroom)/soundid-reference/"
+#          test -e "$${brew_prefix}/Caskroom/soundid-reference/latest/SoundID Reference.app"
 #	pkgutil --pkgs=$(PKG_ID)
 
 clean:: ## Remove temporary/build files.

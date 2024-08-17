@@ -29,6 +29,23 @@
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![pre-commit](https://github.com/LyraPhase/homebrew-soundid-reference/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/LyraPhase/homebrew-soundid-reference/actions/workflows/pre-commit.yml)
 
+> [!IMPORTANT]
+> This Tap has been migrated to:
+> [`LyraPhase/homebrew-av-casks`][homebrew-av-casks] repo!
+>
+> Users of this cask should follow the migration instructions below.
+
+# How do I migrate to the new Tap?
+
+    brew uninstall lyraphase/soundid-reference/soundid-reference
+    brew untap lyraphase/soundid-reference
+    brew tap lyraphase/av-casks
+    brew install soundid-reference
+
+# Archived README
+
+The below information is old and outdated. Kept here for archival purposes only.
+
 Install SoundID Reference via Homebrew
 
 This recipe is designed to install the latest SoundID Reference
@@ -130,3 +147,4 @@ Copyright (C) © 🄯  2022 James Cuzella
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 [keybase-id]: https://gist.github.com/trinitronx/aee110cbdf55e67185dc44272784e694
+[homebrew-av-casks]: https://github.com/LyraPhase/homebrew-av-casks

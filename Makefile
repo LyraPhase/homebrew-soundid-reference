@@ -35,6 +35,8 @@ test: install ## Run tests
           fi \
           echo "arm64 = $arm64" \
           echo "brew_prefix = $brew_prefix" \
+          env \
+          ls -lR "${brew_prefix}/Caskroom/soundid-reference/" \
           test -e "${brew_prefix}/Caskroom/soundid-reference/latest/SoundID Reference.app"
 #	pkgutil --pkgs=$(PKG_ID)
 

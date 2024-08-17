@@ -33,6 +33,8 @@ test: install ## Run tests
           else
             brew_prefix="/usr/local"
           fi \
+          echo "arm64 = $arm64" \
+          echo "brew_prefix = $brew_prefix" \
           test -e "${brew_prefix}/Caskroom/soundid-reference/latest/SoundID Reference.app"
 #	pkgutil --pkgs=$(PKG_ID)
 
